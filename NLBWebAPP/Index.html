@@ -1,0 +1,37 @@
+﻿
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="Student.css" rel="stylesheet" />
+<script src="StudentsController.js"></script>
+    <div class="container" data-ng-app="studentsApp">
+        <div class="panel panel-default table-container">
+            <div class="panel-heading">Students</div>
+            <div class="panel-body" data-ng-controller="studentsCtrl">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group search-box">
+                            <input type="text" class="form-control" id="search" placeholder="Search Data" data-ng-model="search">
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <table class="table table-striped" id="dataTable">
+                            <thead>
+                                <tr>
+                                    <th>Full name</th>
+                                    <th>Age</th>
+                                    <th>Hobbies</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-ng-repeat="user in students|filter:search">
+                                    <td>{{user.name}}</td>
+                                    <td>{{user.age}}</td>
+                                    <td>{{user.hobbies}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

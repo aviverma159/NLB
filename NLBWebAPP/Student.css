@@ -1,0 +1,18 @@
+﻿body {
+}
+
+.search-box {
+  margin: 5px;
+}
+
+.panel-heading {
+  font-weight: bold;
+}
+
+.table-container .panel-body {
+  padding: 0;
+}
+
+.table-container table tr th {
+  font-weight: bold;
+}
